@@ -1,24 +1,31 @@
 #include<iostream>
 #include<string>
 #include<cstdio>
+#include <vector>
 
 using namespace std;
 
-int list_length = 1000;
-
 string current_line;
 
-void parse() {
-    printf("printf fucks\n");
-    return;
+void parseInput(vector<int>& left, vector<int>& right) {
+    
+    int intLeft, intRight;
+
+    while(cin >> intLeft >> intRight) {
+        left.push_back(intLeft);
+        right.push_back(intRight);
+    }
 }
 
 int main()
 {
-    parse();
-    std::cout << "hello!\n";
-    while (getline(cin, current_line)){
-        printf("%s\n", current_line.c_str());
+    vector<int> left, right;
+
+    parseInput(left, right);
+
+    for (int num : left) {
+        printf("%d\n", num);
     }
+
     return 0;
 }
