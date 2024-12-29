@@ -1,3 +1,6 @@
+/test_*.cpp
+# object files
+.o
 # Executables
 .exe 
 .out
